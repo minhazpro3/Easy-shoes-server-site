@@ -70,6 +70,12 @@ async function run() {
       res.send(result)
   })
 
+//   get all product
+    app.get('/allData', async (req,res)=>{
+        const result = await allOrderInfo.find({}).toArray()
+        res.send(result)
+    })
+
   }
   finally{
     // await client.close();
